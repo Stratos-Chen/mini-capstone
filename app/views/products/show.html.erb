@@ -1,0 +1,13 @@
+<h1> Product showcase </h1>
+<h2><%= @product.name %></h2>
+<h3><%= @product.price %></h3>
+<h3><%= @product.description %></h3>
+<h4><%= @product.supplier_id %></h3>
+
+<a href="/products/<%= @product.id %>/edit">Edit</a>
+<a href="/products/<%= @product.id %>" data-method="delete">Delete</a>
+
+<form action="/products/<%=@product.id %>" method="post">
+  <form action = "hidden" name="_method" value="delete">
+  <button type="submit">Delete</button>
+</form>
